@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 
-using Xamarin.Forms;
-
-namespace AppTempoAgora.Model
+namespace AppTempo.Model
 {
-    class Tempo
+    public class Tempo
     {
         public string Title { get; set; }
         public string Temperature { get; set; }
@@ -18,16 +15,16 @@ namespace AppTempoAgora.Model
         public string Sunset { get; set; }
 
 
-
-        public Tempo ()
+        public Tempo()
         {
-            this.Title = "";
-            this.Temperature = "";
-            this.Wind = "";
-            this.Humidity = "";
-            this.Visibility = "";
-            this.Sunrise = "";
-            this.Sunset = "";
+            this.Title = " ";
+            this.Temperature = " ";
+            this.Wind = " ";
+            this.Humidity = " ";
+            this.Visibility = " ";
+            this.Sunrise = " ";
+            this.Sunset = " ";
         }
+
     }
 }
