@@ -16,7 +16,7 @@ namespace AppTempo.Services
         {
             string appId = "6ca829fba8a5212cc4dfdf1dea427374";
 
-            string queryString = "http://api.openweathermap.org/data/2.5/weather?q=" + cidade + "&units=metric" + "&appid=" + appId;
+            string queryString = "https://api.openweathermap.org/data/2.5/weather?q=" + cidade + "&units=metric" + "&appid=" + appId;
 
             dynamic resultado = await getDataFromService(queryString).ConfigureAwait(false);
 
@@ -58,7 +58,7 @@ namespace AppTempo.Services
         public static async Task<dynamic> getDataFromServiceByCity(string city)
         {
             string appId = "6ca829fba8a5212cc4dfdf1dea427374";
-            string url = string.Format("http://api.openweathermap.org/data/2.5/forecast/daily?q={0}&units=metric&cnt=1&APPID={1}", city.Trim(), appId);
+            string url = string.Format("https://api.openweathermap.org/data/2.5/forecast/daily?q={0}&units=metric&cnt=1&APPID={1}", city.Trim(), appId);
             HttpClient client = new HttpClient();
             var response = await client.GetAsync(url);
             dynamic data = null;

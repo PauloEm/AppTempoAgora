@@ -4,18 +4,20 @@
              x:Class="AppTempo.MainPage">
 
     <StackLayout>
-        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Background="blue">
+        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Background="LightCoral">
             <StackLayout Padding="10,10,10,10" HorizontalOptions="Start">
                 <Label Text="Procuparar Cidade" TextColor="White" FontAttributes="Bold" FontSize="Medium"/>
                 <Label x:Name="cidadeLabel" Text="Digite o nome da cidade" TextColor="Yellow" FontSize="Small"/>
                 <Entry x:Name="cidadeEntry"/>
+                
             </StackLayout>
-            <StackLayout Padding="0,0,0,10" VerticalOptions="End">
+            <StackLayout Padding="0,0,0,10" VerticalOptions="End" >
                 <Button x:Name="btnPrevisao" Text="Previsão do Tempo" WidthRequest="185"
                         BorderWidth="1" Clicked="btnPrevisao_Clicked"/>
             </StackLayout>
         </StackLayout>
-        <StackLayout Padding="10,10,10,10" HorizontalOptions="Start">
+
+        <StackLayout Padding="10,10,10,10"  BackgroundColor="Pink" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
             <Image x:Name="imgTempo"/>
             <Label Text="Local"/>
             <Label Text="{Binding Title}" TextColor="Black"/>
